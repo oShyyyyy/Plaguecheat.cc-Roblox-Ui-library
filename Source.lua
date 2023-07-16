@@ -620,7 +620,7 @@ WEBSITE.Position = UDim2.new(0.177174687, 0, 0.499190629, 0)
 WEBSITE.Size = UDim2.new(0, 197, 0, 23)
 WEBSITE.ZIndex = 3
 WEBSITE.Font = Enum.Font.ArialBold
-WEBSITE.Text = "NerdsInc.gq" 
+WEBSITE.Text = "Catwareniga.ga" 
 WEBSITE.TextColor3 = Color3.fromRGB(199, 199, 199)
 WEBSITE.TextSize = 14.000
 WEBSITE.TextXAlignment = Enum.TextXAlignment.Left
@@ -635,7 +635,7 @@ LABEL2.Position = UDim2.new(0.795508027, 0, 0.455712378, 0)
 LABEL2.Size = UDim2.new(0, 197, 0, 23)
 LABEL2.ZIndex = 3
 LABEL2.Font = Enum.Font.ArialBold
-LABEL2.Text = "Alpha build / âˆž days left"
+LABEL2.Text = "Alpha build / Ã¢Ë†Å¾ days left"
 LABEL2.TextColor3 = Color3.fromRGB(199, 199, 199)
 LABEL2.TextSize = 14.000
 LABEL2.TextXAlignment = Enum.TextXAlignment.Right
@@ -2272,25 +2272,26 @@ end
 
 draggable(MAIN)
 
--- to check fps (not mine function so yeah) --
-spawn(function()
-	local TimeFunction = RunService:IsRunning() and time or os.clock
-	local LastIteration, Start
-	local FrameUpdateTable = {}
-	local function HeartbeatUpdate()
-		LastIteration = TimeFunction()
-		for Index = #FrameUpdateTable, 1, -1 do
-			FrameUpdateTable[Index + 1] = FrameUpdateTable[Index] >= LastIteration - 1 and FrameUpdateTable[Index] or nil
-		end
+local texts = {
+	"Welcome, osheep ðŸ¤“ ",
+	"Retard ðŸ¤“",
+	"Get better ðŸ¤“ ",
+	"Why hacking ðŸ¤“ ",
+	"dude is hacking in a lego game ðŸ¤“ ",
+	"imagine being bad ðŸ¤“",
+	"get a real girlfriend lol ðŸ¤“",
+	"do u know how talk to a girl ? ðŸ¤“",
+		"rare thing ss and get reward ðŸ¤“",
+		"do u think niger are slave ? ðŸ¤“",
+			"what about ",
+			"dadsdasasdasdsaasd"
+}
 
-		FrameUpdateTable[1] = LastIteration
-		library.fps = tostring(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start))) .. " FPS"
-		UPPERLABEL.Text = library.fps
-	end
 
-	Start = TimeFunction()
-	RunService.Heartbeat:Connect(HeartbeatUpdate)
-end)
+local te424xt = texts[math.random(1, #texts)]
+
+UPPERLABEL.Text = te424xt
+
 library.GUI = PCR_1 
 
 return library
